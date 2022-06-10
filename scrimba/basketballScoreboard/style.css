@@ -1,0 +1,95 @@
+@import url("http://fonts.cdnfonts.com/css/cursed-timer-ulil");
+
+:root {
+  --main-font: system-ui, Roboto, sans-serif;
+  --secondary-font: "Cursed Timer Ulil", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+.main .title {
+  margin: 2rem 0;
+}
+
+.container {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1450px;
+}
+
+.card {
+  /* transition: 0.3s; */
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 2.5px solid #111;
+  width: 35%;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-family: var(--main-font);
+  text-align: center;
+}
+
+.screen--container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.screen {
+  margin: 2rem auto;
+  background-color: #000;
+  border-radius: 10px;
+  color: #ff0000;
+  padding: 4rem 0;
+}
+
+.score {
+  font: 5rem var(--secondary-font);
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #111;
+}
+
+.container--btn {
+  text-align: center;
+}
+
+#new {
+  padding: 1rem 3rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .card {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .container--btn {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+}
