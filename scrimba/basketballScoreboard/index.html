@@ -20,9 +20,9 @@
               <p class="score" id="home">0</p>
             </div>
             <div class="btns-container">
-              <button onclick="addOneHome()" class="title">+ 1</button>
-              <button onclick="addTwoHome()" class="title">+ 2</button>
-              <button onclick="addThreeHome()" class="title">+ 3</button>
+              <button id="add-one-home" class="title">+ 1</button>
+              <button id="add-two-home" class="title">+ 2</button>
+              <button id="add-three-home" class="title">+ 3</button>
             </div>
           </div>
         </div>
@@ -33,15 +33,15 @@
               <p class="score" id="guest">0</p>
             </div>
             <div class="btns-container">
-              <button onclick="addOneGuest()" class="title">+ 1</button>
-              <button onclick="addTwoGuest()" class="title">+ 2</button>
-              <button onclick="addThreeGuest()" class="title">+ 3</button>
+              <button id="add-one-guest" class="title">+ 1</button>
+              <button id="add-two-guest" class="title">+ 2</button>
+              <button id="add-three-guest" class="title">+ 3</button>
             </div>
           </div>
         </div>
       </div>
       <div class="container--btn">
-        <button id="new" type="reset">New Game</button>
+        <button id="new" type="reset" onclick="newGame()">New Game</button>
       </div>
     </div>
     <script src="./index.js"></script>

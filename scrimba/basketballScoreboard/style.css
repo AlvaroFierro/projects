@@ -68,6 +68,10 @@ button {
   border: 1px solid #111;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .container--btn {
   text-align: center;
 }
