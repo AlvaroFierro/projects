@@ -47,3 +47,13 @@ guestAddThree.addEventListener("click", () => {
   guestScore += 3;
   scoreElGuest.textContent = guestScore;
 });
+
+// New game button
+let newGame = document.getElementById("new-game");
+
+newGame.addEventListener("click", () => {
+  homeScore = 0;
+  guestScore = 0;
+  scoreElHome.textContent = homeScore;
+  scoreElGuest.textContent = guestScore;
+});

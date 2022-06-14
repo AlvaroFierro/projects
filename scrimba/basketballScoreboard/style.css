@@ -3,6 +3,8 @@
 :root {
   --main-font: system-ui, Roboto, sans-serif;
   --secondary-font: "Cursed Timer Ulil", cursive;
+  --btn-color: rgb(118, 136, 235);
+  --btn-color-hover: rgb(80, 101, 223);
 }
 
 *,
@@ -66,19 +68,24 @@ button {
   padding: 0.5rem 0.7rem;
   border-radius: 5px;
   border: 1px solid #111;
+  background-color: var(--btn-color);
+  font: 500 1rem var(--main-font);
 }
 
 button:hover {
   cursor: pointer;
+  background-color: var(--btn-color-hover);
 }
 
 .container--btn {
   text-align: center;
 }
 
-#new {
-  padding: 1rem 3rem;
+#new-game {
+  padding: 1rem 2.5rem;
   text-align: center;
+  font: 15px var(--main-font);
+  border: 1.5px solid #111;
 }
 
 @media screen and (max-width: 768px) {
