@@ -1,16 +1,29 @@
-let countEl = document.getElementById("count-el");
-let saveEl = document.getElementById("save-el");
-
+let counterEl = document.getElementById("counter");
+let increaseEl = document.getElementById("increase");
+let resetEl = document.getElementById("reset");
+let decreaseEl = document.getElementById("decrease");
+let saveEl = document.getElementById("save");
+let entriesEl = document.getElementById("entries-el");
 let count = 0;
 
-let increment = () => {
+increaseEl.addEventListener("click", () => {
   count++;
-  countEl.textContent = count;
-};
+  counterEl.textContent = count;
+});
 
-let save = () => {
-  let entries = ` ${count} -`;
-  saveEl.textContent += entries;
-  countEl.textContent = 0;
+resetEl.addEventListener("click", () => {
   count = 0;
-};
+  counterEl.textContent = count;
+});
+
+decreaseEl.addEventListener("click", () => {
+  count--;
+  counterEl.textContent = count;
+});
+
+saveEl.addEventListener("click", () => {
+  let entries = ` ${count} -`;
+  entriesEl.textContent += entries;
+  counterEl.textContent = 0;
+  count = 0;
+});
