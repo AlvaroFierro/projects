@@ -1,20 +1,41 @@
-let age = Math.floor(Math.random() * 123 + 21);
-console.log(age);
+let firstCard = 10;
+let secondCard = 4;
 
-const kingName = "Harald V";
+cards = [firstCard, secondCard];
+let sum = firstCard + secondCard;
+let hasBlackJack = false;
 
-if (age <= 99) {
-  console.log(
-    `We're sorry but you can't get a gift card from the king coz you're ${age} years old`
-  );
-} else if (age === 100) {
-  console.log(`Congrats!\n Here you have your gift card from ${kingName} `);
-} else {
-  console.log(
-    `You've already gotten one gift card coz you're ${age} years old`
-  );
-}
+let isAlive = true;
+let message = "";
+let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
+let cardsEl = document.getElementById("cards-el");
 
-let card = Math.floor(Math.random(2) * 10);
+let startGame = () => {
+  renderGame();
+};
 
-console.log(card);
+let renderGame = () => {
+  cardsEl.textContent = `Cards: ${cards[0]} ${cards[1]}`;
+
+  // render out All the cards we have
+
+  sumEl.textContent = `Sum: ${sum}`;
+  if (sum <= 20) {
+    message = "Do you want to draw a new car?";
+  } else if (sum === 21) {
+    message = "You've got BlackJack!";
+    hasBlackJack = true;
+  } else {
+    message = "You're out of the game!";
+    isAlive = false;
+  }
+  messageEl.textContent = message;
+};
+
+let newCard = () => {
+  let card = 6;
+  sum += card;
+  cards.push(card);
+  renderGame();
+};
