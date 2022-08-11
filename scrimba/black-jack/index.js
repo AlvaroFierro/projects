@@ -1,24 +1,50 @@
-let firstCard = 10;
-let secondCard = 4;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 
-cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+cards = [];
+let sum = 0;
 let hasBlackJack = false;
-
-let isAlive = true;
+let isAlive = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
-let startGame = () => {
+/*
+ Make this function return a random number between 1-13 
+ but if 1 => return  11
+ if 11-13 => return 10
+ else return number
+*/
+
+function getRandomCard() {
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
+  if (randomNumber > 10) {
+    return 11;
+  } else if (randomNumber === 1) {
+    return 10;
+  } else {
+    return randomNumber;
+  }
+}
+
+function startGame() {
+  isAlive = true;
+  // Generate two random numbers
+  let firstCard = Math.floor(Math.random() * 13) + 1;
+  let secondCard = Math.floor(Math.random() * 13) + 1;
+  cards = [firstCard, secondCard];
+  sum = firstCard + secondCard;
+  // Re-assign the cards and sum variables so that the game can start
+
   renderGame();
-};
+}
 
-let renderGame = () => {
-  cardsEl.textContent = `Cards: ${cards[0]} ${cards[1]}`;
-
-  // render out All the cards we have
+function renderGame() {
+  cardsEl.textContent = "Cards: ";
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += ` ${cards[i]}`;
+  }
 
   sumEl.textContent = `Sum: ${sum}`;
   if (sum <= 20) {
@@ -31,11 +57,14 @@ let renderGame = () => {
     isAlive = false;
   }
   messageEl.textContent = message;
-};
+}
 
-let newCard = () => {
-  let card = 6;
-  sum += card;
-  cards.push(card);
-  renderGame();
-};
+function newCard() {
+  // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+  if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    renderGame();
+  }
+}
