@@ -99,3 +99,15 @@ let weekday = "Friday";
 if (dayOfMonth === 13 && weekday === "Friday") {
   console.log("😱");
 }
+
+// ---------------------- 🪨✂️📄 with functions ---------------------- //
+
+let hands = ["rock", "paper", "scissor"];
+
+// Create a function that returns a random item from the array
+
+let getHands = () => {
+  let getIndex = Math.floor(Math.random() * hands.length);
+  return hands[getIndex];
+};
+console.log(getHands());
