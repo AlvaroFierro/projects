@@ -1,0 +1,78 @@
+:root {
+  --main-color: rgb(31, 41, 55);
+  --secondary-color: rgb(74, 223, 134);
+  --medium-gray: rgb(213, 212, 216);
+  --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --button-color: rgb(16, 185, 129);
+  --password-color: rgb(39, 53, 73);
+  --password-text-color: rgb(85, 249, 145);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+#xa89 {
+  font-size: 1.05rem;
+  color: var(--medium-gray);
+}
+button {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  background-color: var(--main-color);
+  color: white;
+}
+
+#random-text {
+  color: var(--secondary-color);
+}
+
+.password-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.passwd {
+  margin: 1.5rem 0 0 0;
+  height: ;
+  text-align: center;
+  border-radius: 5px;
+  min-width: 200px;
+  padding: 1rem;
+  background-color: var(--password-color);
+}
+
+.passwd p {
+  color: var(--password-text-color);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .password-container {
+    display: block;
+  }
+}
