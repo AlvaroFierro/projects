@@ -61,18 +61,25 @@ button {
   height: ;
   text-align: center;
   border-radius: 5px;
-  min-width: 200px;
-  padding: 1rem;
+  max-width: 50%;
+  min-width: 220px;
   background-color: var(--password-color);
 }
-
+.passwd p::before {
+  content: " ";
+  padding: 0.5rem;
+}
 .passwd p {
   color: var(--password-text-color);
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
   .password-container {
     display: block;
+  }
+  .passwd {
+    min-width: 100%;
   }
 }
