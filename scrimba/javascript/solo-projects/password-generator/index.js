@@ -91,3 +91,19 @@ const characters = [
   "?",
   "/",
 ];
+
+let passwordLength = 15;
+
+let generatePasswdEl = document.getElementById("generate-password");
+let firstPasswdEl = document.getElementById("first-passwd");
+let secondPasswdEl = document.getElementById("second-passwd");
+
+generatePasswdEl.addEventListener("click", () => {
+  password = "";
+  for (let i = 0; i < passwordLength; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters[randomIndex];
+  }
+  return `${(firstPasswdEl.textContent =
+    password)} ${(secondPasswdEl.textContent = password)}`;
+});
