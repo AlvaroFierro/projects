@@ -29,6 +29,14 @@ button {
   background-color: var(--primary-color);
   color: white;
   border: none;
+  font-weight: bold;
+  border: 1px solid #5f9341;
+}
+
+#delete-btn {
+  padding: 0.65rem;
+  background-color: white;
+  color: var(--primary-color);
 }
 
 ul {

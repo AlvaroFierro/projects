@@ -1,35 +1,49 @@
-// Create two variables:
-// myLeads -> should be assigned to an empty array
-// inputEl -> should be assigned to the text input field
+let myLeads = [];
+const inputEl = document.getElementById('input-el');
+const tabBtn = document.getElementById('tab-btn');
+const inputBtn = document.getElementById('input-btn');
+const ulEl = document.getElementById('ul-el');
+const deleteBtn = document.getElementById('delete-btn');
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'));
 
-let myLeads = []
-
-// 1. Turn the myLeads string into an array
-// 2. Push a new value to the array
-// 3. Turn the array into a string again
-// 4. Console.log the string using typeof to verify that it's a string
-
-const inputEl = document.getElementById('input-el')
-const inputBtn = document.getElementById('input-id')
-const ulEl = document.getElementById('ul-el')
-
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'))
-console.log(leadsFromLocalStorage)
-
-inputBtn.addEventListener('click', () => {
-  myLeads.push(inputEl.value)
-  inputEl.value = ''
-  // * here you set the item from the input value
-  localStorage.setItem('myLeads', JSON.stringify(myLeads))
-  renderLeads()
-  console.log(localStorage.getItem('myLeads'))
-})
-
-function renderLeads() {
-  let listItems = ''
-  for (let i = 0; i < myLeads.length; i++) {
-    const index = myLeads[i]
-    listItems += `<li><a href=${index} target="_blank">${index}</a></li>`
-  }
-  ulEl.innerHTML = listItems
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  render(myLeads);
 }
+
+function render(leads) {
+  let listItems = '';
+  for (let i = 0; i < leads.length; i++) {
+    let index = leads[i];
+    listItems += `<li> <a target='_blank' href='${index}'> ${index} </a> </li>`;
+  }
+  ulEl.innerHTML = listItems;
+}
+
+tabBtn.addEventListener('click', () => {
+  // newest version (manifest V3)
+
+  async function getCurrentTab(tabs) {
+    let queryOptions = { active: true, lastFocusedWindow: true };
+    // `tab` will either be a `tabs.Tab` instance or `undefined`.
+    let [tab] = await chrome.tabs.query(queryOptions);
+    return tab;
+
+    myLeads.push(tab[0].url);
+    localStorage.setItem('myLeads', JSON.stringify(myLeads));
+    render(myLeads);
+  }
+});
+
+deleteBtn.addEventListener('dblclick', function () {
+  localStorage.clear();
+  myLeads = [];
+  render(myLeads);
+});
+
+inputBtn.addEventListener('click', function () {
+  myLeads.push(inputEl.value);
+  inputEl.value = '';
+  localStorage.setItem('myLeads', JSON.stringify(myLeads));
+  render(myLeads);
+});
