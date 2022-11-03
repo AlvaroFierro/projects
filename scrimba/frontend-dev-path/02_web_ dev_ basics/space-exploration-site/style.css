@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  color: #009999;
+  background-size: cover;
+  background-image: url(./img/universe.gif);
+  text-align: center;
+}
+#apply-btn {
+  font-weight: bolder;
+  color: #009999;
+
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: none;
+}
+
+#exploration {
+  border-bottom: 5px solid #fff;
+}
+
+#logo {
+  width: 10%;
+  height: auto;
+}
