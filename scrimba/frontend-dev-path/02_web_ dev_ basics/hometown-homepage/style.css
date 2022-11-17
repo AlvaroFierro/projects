@@ -1,0 +1,136 @@
+:root {
+  --main-color: rgb(67, 126, 156);
+  --secondary-color: rgb(148, 176, 194);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  margin-bottom: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero {
+  height: 35vh;
+  padding: 2rem 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./img/hero-background.webp);
+}
+
+.header {
+  padding: 1rem 1.75rem;
+  background-color: var(--main-color);
+  text-align: center;
+  text-shadow: 2px 2px black;
+  color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.heading {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+#about {
+  color: white;
+}
+
+.activities {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.rounded img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  width: 15rem;
+  height: 15rem;
+}
+.rounded {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading h2,
+.info p {
+  inline-size: 15rem;
+  overflow-wrap: break-word;
+}
+
+#card {
+  text-align: center;
+  max-width: 80%;
+  padding: 2rem;
+  display: flex;
+  background-color: #9eb7c7;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  border-bottom: 0.5rem solid var(--main-color);
+}
+
+#left-card,
+#right-card {
+  width: 50%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+#left-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#right-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .activities {
+    display: block;
+  }
+
+  .activities img {
+    margin: 1rem 0;
+  }
+  #card {
+    display: block;
+  }
+  #left-card,
+  #right-card {
+    width: 100%;
+  }
+}
