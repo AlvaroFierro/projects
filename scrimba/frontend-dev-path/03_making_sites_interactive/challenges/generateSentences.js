@@ -1,19 +1,12 @@
-function generateSentence(desc, arr) {
-  let baseString = `The ${arr.length} ${desc} are `
+let generateSentence = (desc, arr) => {
+  let string = `The ${arr.length} ${desc} are `
   const lastItem = arr.length - 1
-  for (let i = 0; i < arr.length; i++) {
-    if (i === lastItem) {
-      baseString += arr[i]
-    } else {
-      baseString += arr[i] + ', '
-    }
-  }
 
-  return baseString
+  for (let i = 0; i < arr.length; i++) {
+    i === lastItem ? (string += arr[i]) : (string += arr[i] + ', ')
+  }
+  return string
 }
 
-const mountains = generateSentence('highest mountains', [
-  'Mount Everest',
-  'Fiji',
-])
-console.log(mountains)
+const sentence = generateSentence('largest mountains', ['Everest', 'Fiji'])
+console.log(sentence)
