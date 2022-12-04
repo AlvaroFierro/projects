@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+:root {
+  --main-box: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --secondary-box: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --card-header: hsl(201, 96%, 32%);
+  --card-body-bg: #f4f4f4;
+  --unit-card-bg: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+#container {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 50rem;
+  text-align: center;
+}
+
+#card {
+  box-shadow: var(--main-box);
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+#card_header {
+  color: white;
+  background-color: var(--card-header);
+  padding: 1.5rem;
+  border-radius: 0.6rem 0.6rem 0 0;
+  -webkit-border-radius: 0.6rem 0.6rem 0 0;
+  -moz-border-radius: 0.6rem 0.6rem 0 0;
+  -ms-border-radius: 0.6rem 0.6rem 0 0;
+  -o-border-radius: 0.6rem 0.6rem 0 0;
+}
+
+#card_body {
+  padding: 1.5rem;
+}
+
+#unit {
+  margin: 1rem 0;
+  border: 2px solid #ccc;
+  height: 4.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  max-width: 8.5rem;
+  color: white;
+  outline: none;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  text-align: center;
+  background-color: transparent;
+  padding: 0.5rem 0;
+}
+
+#unit::-webkit-inner-spin-button,
+#unit::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#convertBtn {
+  padding: 1rem 1.5rem;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  width: 8.5rem;
+  border: 0;
+  outline: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+#card_body {
+  background-color: var(--card-body-bg);
+}
+
+.result {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  box-shadow: var(--secondary-box);
+  background-color: var(--unit-card-bg);
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.convert {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0369a1;
+}
