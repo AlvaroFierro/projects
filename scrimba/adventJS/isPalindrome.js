@@ -1,10 +1,8 @@
 function isPalindrome(str) {
   const presentence = str.replace(/[\W_]/g, '').toLowerCase()
   const reversedStr = presentence.split('').reverse().join('')
-  return reversedStr === presentence ? true : false
+  return reversedStr === presentence
 }
-
-console.log(isPalindrome('A man, a plan, a canal. Panama'))
 
 console.log(isPalindrome('abba'))
 console.log(isPalindrome('civic'))
