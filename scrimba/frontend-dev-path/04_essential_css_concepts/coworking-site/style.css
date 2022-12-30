@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --nav-bar-color: #252525;
+  --white-color: whitesmoke;
+  --exclusive-banner: #cd6958;
+  --chat-box-color: #dda15f;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#navbar {
+  background: var(--nav-bar-color);
+  color: var(--white-color);
+}
+
+ul {
+  padding: 1.56rem;
+}
+
+ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  font-weight: bold;
+}
+
+.icon {
+  height: 1.25rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 1.56rem 1.875rem;
+}
+
+img {
+  width: 100%;
+}
+
+.item {
+  position: relative;
+}
+
+.img-banner {
+  background-color: var(--exclusive-banner);
+  padding: 0.5rem 0.75rem;
+  color: var(--white-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.56rem 1.875rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  color: var(--white-color);
+  background-color: var(--exclusive-banner);
+}
+
+.chatbox-bg {
+  display: flex;
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--chat-box-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 1px 1px 5px #999;
+  cursor: pointer;
+}
+
+.chatbox-img {
+  margin: auto;
+  width: 50%;
+}
