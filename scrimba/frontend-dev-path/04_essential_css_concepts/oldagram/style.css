@@ -8,32 +8,28 @@
 
 body {
   font-family: system-ui;
+  background-color: #eee;
 }
 
 .container {
-  max-width: 75rem;
+  max-width: 25rem;
   margin: 0 auto;
 }
 
-header {
-  border-bottom: 1px solid #ccc;
-}
-
-.nav__container {
+.profile {
+  padding: 1rem;
   display: flex;
-  padding: 0 2rem;
-  height: 80px;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.785rem;
 }
 
-.logo:hover {
-  cursor: pointer;
-}
-
-header img {
-  max-width: 100%;
-  height: 45px;
+.profile img {
+  justify-content: center;
+  align-content: center;
+  width: 50px;
+  height: inherit;
+  object-fit: cover;
+  object-position: top;
 }
 
 .rounded-img {
@@ -44,63 +40,65 @@ header img {
   -o-border-radius: 50%;
 }
 
-.post-data {
-  padding: 0 2rem;
-  margin-top: 1.25rem;
+.nav--container {
   display: flex;
+  padding: 0 1rem;
+  height: 80px;
   align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
 }
 
-.profile img {
-  width: 50px;
+.nav--container img {
+  max-width: 100%;
   height: 50px;
-  margin-right: 1rem;
 }
 
-.username {
-  font-weight: bold;
-  font-size: 1.125rem;
-}
-
-.location {
-  font-size: 0.785rem;
-}
-
-.post-img img {
-  margin-top: 1.25rem;
-  width: 100%;
-  height: auto;
-}
-
-.interaction {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.interaction,
-.likes,
-.comments {
-  padding: 0.125rem 2rem;
-  margin-top: 0.25rem;
-}
-
-.interaction img {
-  width: 1.25rem;
-  height: auto;
+.logo:hover {
   cursor: pointer;
 }
 
-.likes {
-  font-weight: bold;
-  font-size: 0.85rem;
-}
-
-.comments {
+#content {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.user span {
+.post {
+  background-color: #fff;
+}
+
+.username,
+.likes--count {
   font-weight: bold;
-  margin-top: 1.25rem;
-  margin-right: 0.45rem;
+}
+
+.post--img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icon {
+  max-width: 100%;
+  height: 1.5rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem 1.5rem 1rem;
+}
+
+.caption,
+.location {
+  gap: 0.5rem;
+  font-size: small;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
 }
