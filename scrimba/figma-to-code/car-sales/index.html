@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/0505d45c82.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="headings">
+          <h1>Available Cars</h1>
+          <p>There are 15 cars that match your criteria</p>
+        </div>
+        <div class="options">
+          <form>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search..."
+              class="search"
+            />
+            <img src="./assets/menu.svg" alt="" class="menu" />
+          </form>
+        </div>
+        <div class="filter">
+          <div class="chk-container">
+            <input type="checkbox" name="new" id="new" />
+            <label for="new">New cars</label>
+          </div>
+          <div class="chk-container">
+            <input type="checkbox" name="used" id="used" />
+            <label for="used">Used cars</label>
+          </div>
+          <div class="chk-container">
+            <input type="checkbox" name="dealer" id="dealer" />
+            <label for="dealer">Dealership</label>
+          </div>
+          <div class="chk-container">
+            <input type="checkbox" name="owner" id="owner" />
+            <label for="owner">For sale by owner</label>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="table">
+          <div class="row header">
+            <div class="cell">Car details</div>
+            <div class="cell">Location</div>
+            <div class="cell">Price</div>
+            <div class="cell">Action</div>
+          </div>
+
+          <div class="row">
+            <div class="cell details">
+              <a href="#">2017 Toyota Highlander V4</a>
+            </div>
+            <div class="cell location">
+              <p>1944 Scrimba Ln Youngstown, OH 44481</p>
+            </div>
+            <div class="cell price">
+              <p>$17,400</p>
+            </div>
+            <div class="cell action">
+              <span><i class="far fa-heart fa-lg"></i></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cell details">
+              <a href="#">2012 Toyota Tundra 4x4</a>
+            </div>
+            <div class="cell location">
+              <p>301 Fantasy Dr Beverly Hills, CA 90210</p>
+            </div>
+            <div class="cell price">
+              <p>$23,900</p>
+            </div>
+            <div class="cell action">
+              <span><i class="far fa-heart fa-lg"></i></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cell details">
+              <a href="#">2004 Dodge Ram 4x4</a>
+            </div>
+            <div class="cell location">
+              <p>1944 Scrimba Ln Youngstown, OH 44481</p>
+            </div>
+            <div class="cell price">
+              <p>$7,998</p>
+            </div>
+            <div class="cell action">
+              <span><i class="far fa-heart fa-lg"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell details">
+              <a href="#">2021 Tesla Model 3</a>
+            </div>
+            <div class="cell location">
+              <p>9104 Falsety Ave AnonyVille, FL 40440</p>
+            </div>
+            <div class="cell price">
+              <p>$37,490</p>
+            </div>
+            <div class="cell action">
+              <span><i class="far fa-heart fa-lg"></i></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cell details">
+              <a href="#">2017 Toyota Highlander V4</a>
+            </div>
+            <div class="cell location">
+              <p>993 Fiscal St Boulder, CO 93391</p>
+            </div>
+            <div class="cell price">
+              <p>$17,400</p>
+            </div>
+            <div class="cell action">
+              <span><i class="far fa-heart fa-lg"></i></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cell details">
+              <a href="#">2012 Toyota Tundra 4x4</a>
+            </div>
+            <div class="cell location">
+              <p>1944 Scrimba Ln Youngstown, OH 44481</p>
+            </div>
+            <div class="cell price">
+              <p>$23,900</p>
+            </div>
+            <div class="cell action">
+              <span><i class="far fa-heart fa-lg"></i></span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
