@@ -2,19 +2,21 @@
 // Log fb to the console to see the output.
 // Hint: Check out the remainder/modulo operator: %.
 
-const fb = [];
+const fb = []
 
-let maxNumber = 1000;
-
-for (i = 1; i < maxNumber; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    fb.push("fizzbuzz");
-  } else if (i % 5 === 0) {
-    fb.push("buzz");
-  } else if (i % 3 === 0) {
-    fb.push("fizz");
-  } else {
-    fb.push(i);
+function fizzbuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      fb.push('fizzbuzz')
+    } else if (i % 5 === 0) {
+      fb.push('buzz')
+    } else if (i % 3 === 0) {
+      fb.push('fizz')
+    } else {
+      fb.push(i)
+    }
   }
+  console.log(fb)
 }
-console.log(fb);
+
+fizzbuzz(16)
