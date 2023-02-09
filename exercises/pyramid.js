@@ -6,13 +6,12 @@
 // #####
 // ######
 // #######
-
 function pyramid(num) {
   let result = ''
   for (let i = 0; i < num; i++) {
     result += '#'
     console.log(result)
   }
+  return result
 }
-
 pyramid(7)
