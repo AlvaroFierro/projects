@@ -33,6 +33,28 @@ Requires a connection to the internet
 
 ## Response
 
-- The reply to the request
+- The reply to the `request` or client
 - Could contain the resource (HTML, JSON data, etc) asked for by the client.
 - Could contain a response code (200, 404, 500, etc) that indicates the status of the request.
+
+# JSON
+
+Stands for JavaScript Object Notation and is a way to store data in a way that is easy to read and write. Practically is JavaScript
+
+# Fetch
+
+Fetch is a way to make requests to a server from the client side.
+
+E.g.:
+
+```js
+fetch('https://dog.ceo/api/breeds/image/random')
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+```
+
+In your console should appear something like this:
+
+```bash
+$ {message: "https://images.dog.ceo/breeds/malamute/n02110063_16966.jpg", status: "success"}
+```
