@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#app,
+form {
+  max-width: 768px;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 1.5rem;
+  background: #3ca;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 0.785em 0;
+}
+
+#submit-btn {
+  padding: 0.5em 1.785em;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background-color: #1f7f6a;
+  border: 0;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#submit-btn:hover {
+  background-color: #21695a;
+  cursor: pointer;
+}
+
+input[type='text'],
+#submit-btn,
+textarea {
+  font-family: inherit;
+  font-size: 0.95em;
+  margin-top: 0.5em;
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+}
+
+textarea {
+  height: 10em;
+}
