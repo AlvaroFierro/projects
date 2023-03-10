@@ -8,6 +8,9 @@ Overview
 - [Components of a Request](#components-of-a-request)
   - [Path (URL)](#path-url)
   - [Methods](#methods)
+  - [Body](#body)
+  - [Headers](#headers)
+    - [Changing the Content-Type Header](#changing-the-content-type-header)
 - [Requesting the JSON Placeholder API](#requesting-the-json-placeholder-api)
 
 # HTTP
@@ -22,18 +25,18 @@ A **protocol** is a system of rules that define how data is exchanged within or 
 
 # Components of a Request
 
-1. **Path** (URL)
-2. **Methods**
-   1. GET, POST, PUT DELETE
-   2. Others: (PATCH, OPTIONS, etc.)
-3. **Body** (depends on the method)
-4. **Headers** (metadata)
-   1. Content-Type
-   2. Authorization
-   3. User-Agent
-   4. Accept
-   5. Cookie
-   6. etc.
+1. **[Path](#path-url)** (URL)
+2. **[Methods](#methods)**
+   - GET, POST, PUT DELETE
+   - Others: (PATCH, OPTIONS, etc.)
+3. **[Body](#body)** (depends on the method)
+4. **[Headers](#headers)** (metadata)
+   - Content-Type
+   - Authorization
+   - User-Agent
+   - Accept
+   - Cookie
+   - etc.
 
 ## Path (URL)
 
@@ -52,6 +55,52 @@ Telling the server what you want to do with the resource.
   - Like blog POST of Facebook POST
 - `PUT` - Updating existing data on the server
 - `DELETE` - Deleting data from the server
+
+## Body
+
+- The data we want to send to the server.
+- Only makes sense with `POST` and `PUT` requests.
+- Needs to be returned into `JSON` first
+
+```js
+const url = 'https://apis.scrimba.com/jsonplaceholder/todos'
+
+fetch(url, {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'Alvaro Fierro is making a POST request',
+    completed: false,
+  }),
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+```
+
+## Headers
+
+They are used to tell the server what kind of data we are sending and what kind of data we want to receive back.
+
+- Extra/meta-information about the outgoing request
+- Auth, body info, client info, etc.
+
+### Changing the Content-Type Header
+
+Changing the `Content-Type` header to `application/json` will tell the server that we are sending JSON data.
+
+```js
+const url = 'https://apis.scrimba.com/jsonplaceholder/todos'
+
+fetch(url, {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'Alvaro Fierro is making a POST request',
+    completed: false,
+  }),
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+```
 
 # Requesting the JSON Placeholder API
 
