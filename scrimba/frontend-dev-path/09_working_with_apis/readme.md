@@ -1,5 +1,27 @@
 # API's
 
+Overview
+
+- [API's](#apis)
+  - [What is an API?](#what-is-an-api)
+- [Endpoints](#endpoints)
+- [API's used](#apis-used)
+- [Clients, servers and requests](#clients-servers-and-requests)
+  - [Client](#client)
+  - [Server](#server)
+  - [Request](#request)
+  - [Response](#response)
+- [JSON](#json)
+- [Fetch](#fetch)
+- [REST API](#rest-api)
+  - [Principles of `REST`](#principles-of-rest)
+    - [Client \& Server separation](#client--server-separation)
+    - [Statelessness](#statelessness)
+    - [Accessing `resources`](#accessing-resources)
+- [Nested Resources](#nested-resources)
+- [Query Strings](#query-strings)
+- [Useful links](#useful-links)
+
 ## What is an API?
 
 An API stands out for Application Programming Interface, which allows you to have interactivity within your website.
@@ -58,3 +80,50 @@ In your console should appear something like this:
 ```bash
 $ {message: "https://images.dog.ceo/breeds/malamute/n02110063_16966.jpg", status: "success"}
 ```
+
+# REST API
+
+Stands for `REpresentational State Transfer`. Is a design pattern to provide a standard way for clients and servers to communicate
+
+## Principles of `REST`
+
+### Client & Server separation
+
+![without-rest](https://user-images.githubusercontent.com/71525061/224423185-23466755-91df-4347-b5bf-a0b82c38624d.png)
+
+_SSR (Server Side Rendering)_
+
+![restful-setup](https://user-images.githubusercontent.com/71525061/224423933-6d1f13b6-ae63-490b-ac29-38e549d87aa7.png)
+
+_RESTFUL SETUP_
+
+### Statelessness
+
+When the client requests a server. The server doesn't maintain any memory of that request. So when a request is sent to the server, the server fulfills that request if it can and sends back a response and then essentially forgets everything about that request.
+
+If often called `session state` or `sessionless`
+
+### Accessing `resources`
+
+That's the interaction between the client and the server is the client asking the server to send it some sort of resource.
+
+![resources](https://user-images.githubusercontent.com/71525061/224426490-6d7045c4-1461-4cca-ba25-dc36bc2a7b57.png)
+
+# Nested Resources
+
+![nested-resources](https://user-images.githubusercontent.com/71525061/224428542-46cd6adb-00d8-41ea-85d6-4bc5d0d7f273.png)
+
+# Query Strings
+
+Parameters? 🤔
+
+A way to filter the results that we get back
+
+![filtering-results](https://user-images.githubusercontent.com/71525061/224429164-bb7031f5-9698-4202-9903-ea3ecc206879.png)
+
+# Useful links
+
+- [HTTP Requests](https://docs.google.com/presentation/d/e/2PACX-1vSxS5iMjTveO-IBqdDE65dgouZStLTW-Vlyt3N9js3FnMCeW8cwSgmrkGzX2i_g0qGCM6fJDKZ-r3Se/pub?start=false&loop=false&delayms=3000&slide=id.g7fabbaef24_1_232)
+- [REST](https://docs.google.com/presentation/d/e/2PACX-1vTEztADtG8OhJ4695LYwtVftNgriQK7zAOsYNru9OfaPA1mQEAlkNd1BqgOdec1aZRC6PxSxOnlrBeH/pub?start=false&loop=false&delayms=3000&slide=id.g7fabbaef24_1_232)
+
+[Back to top](#table-of-contents)
