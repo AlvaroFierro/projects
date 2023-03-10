@@ -12,6 +12,7 @@ Overview
   - [Headers](#headers)
     - [Changing the Content-Type Header](#changing-the-content-type-header)
 - [Requesting the JSON Placeholder API](#requesting-the-json-placeholder-api)
+- [Useful Links](#useful-links)
 
 # HTTP
 
@@ -85,7 +86,7 @@ They are used to tell the server what kind of data we are sending and what kind 
 
 ### Changing the Content-Type Header
 
-Changing the `Content-Type` header to `application/json` will tell the server that we are sending JSON data.
+Changing the `Content-Type` header to `application/**json**` will tell the server that we are sending JSON data.
 
 ```js
 const url = 'https://apis.scrimba.com/jsonplaceholder/todos'
@@ -111,3 +112,8 @@ fetch(URL)
   .then((res) => res.json())
   .then((data) => console.log(data))
 ```
+
+# Useful Links
+
+- [HTTP Requests](https://docs.google.com/presentation/d/e/2PACX-1vSxS5iMjTveO-IBqdDE65dgouZStLTW-Vlyt3N9js3FnMCeW8cwSgmrkGzX2i_g0qGCM6fJDKZ-r3Se/pub?start=false&loop=false&delayms=3000&slide=id.g7fabbaef24_1_232)
+- [REST](https://docs.google.com/presentation/d/e/2PACX-1vTEztADtG8OhJ4695LYwtVftNgriQK7zAOsYNru9OfaPA1mQEAlkNd1BqgOdec1aZRC6PxSxOnlrBeH/pub?start=false&loop=false&delayms=3000&slide=id.g7fabbaef24_1_232)
