@@ -1,35 +1,36 @@
-// const url = 'https://deckofcardsapi.com/api/deck/new/shuffle/'
+const url = 'https://deckofcardsapi.com/api/deck/new/shuffle/'
+let deckId = ''
 
-// document.getElementById('draw-card').addEventListener('click', fetchCard)
+function fetchCard() {
+  fetch(url)
+    .then((data) => data.json())
+    .then((data) => {
+      console.log(data)
+      deckId = data.deck_id
+    })
+}
 
-// function fetchCard() {
-//   fetch(url)
-//     .then((data) => data.json())
-//     .then((data) => console.log(data))
-// }
+document.getElementById('new-deck').addEventListener('click', fetchCard)
+
+document.getElementById('draw-card').addEventListener('click', drawCard)
+
+function drawCard() {
+  fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
+    .then((res) => res.json())
+    .then((data) =>
+      data.cards.filter((card) => {
+        document.getElementById('deck').innerHTML += `<img src="${card.image}">`
+      })
+    )
+}
 
 /**
- * Challenge: method chaining!
+ * Challenge
  *
- * 1. Select the button in the DOM and add an event listener to it without saving the DOM element as a separate variable. I.e. "chain" the `addEventListener` on after your `getElementById()`(When clicked, log "Clicked" to the console)
- *    - I realize this might feel like busywork, but my intent will make sense soon
+ * Task: Using the saved deckId, draw 2 new cards from the deck
  *
- * 2. Given the array below, chain the `.filter` and `.map` array methods together to turn the array into an array of string email addresses of only the people in the array who voted. Log the array of email addresses to the console
+ * Docs for original Deck of Cards API: https://deckofcardsapi.com/#draw-card
+ * BaseUrl you'll use: https://apis.scrimba.com/deckofcards/api/deck/
+ * (that will replace the base url of https://deckofcardsapi.com/api/deck/)
+ * that you'll see in the deck of cards API docs.
  */
-
-// document.getElementById("new-deck").addEventListener("click", function() {
-//     console.log("Clicked!")
-// })
-
-const voters = [
-  { name: 'Joe', email: 'joe@joe.com', voted: true },
-  { name: 'Jane', email: 'jane@jane.com', voted: true },
-  { name: 'Bo', email: 'bo@bo.com', voted: false },
-  { name: 'Bane', email: 'bane@bane.com', voted: false },
-]
-
-// Write your code below
-
-// Final result: ["joe@joe.com", "jane@jane.com"]
-
-voters.filter((voter) => voter.voted).map((voter) => console.log(voter.email))

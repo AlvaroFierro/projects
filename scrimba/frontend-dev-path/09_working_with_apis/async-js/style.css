@@ -9,3 +9,8 @@
 body {
   font-family: 'Open Sans', system-ui, sans-serif;
 }
+
+#app {
+  background-image: url('./assets/table.webp');
+  height: 100vh;
+}
