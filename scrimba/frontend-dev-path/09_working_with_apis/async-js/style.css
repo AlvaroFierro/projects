@@ -8,9 +8,47 @@
 
 body {
   font-family: 'Open Sans', system-ui, sans-serif;
+  background-image: url('./assets/table.webp');
 }
 
 #app {
-  background-image: url('./assets/table.webp');
-  height: 100vh;
+  color: white;
+  display: flex;
+  margin: 1.5em auto;
+  max-width: 65rem;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 3em);
+  justify-content: space-between;
+}
+
+#title {
+  font-size: 2.5em;
+  text-shadow: 5px 5px 5px #000;
+}
+
+.container--cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #000;
+  border-radius: 0.25em;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.container--btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
 }
