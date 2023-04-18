@@ -14,13 +14,18 @@ body {
 #app {
   color: white;
   display: flex;
-  margin: 1.5em auto;
+  margin: 0 auto;
   max-width: 65rem;
-  text-align: center;
+  padding: 1.5em;
   align-items: center;
+  text-align: center;
   flex-direction: column;
-  height: calc(100vh - 3em);
+  height: 100vh;
   justify-content: space-between;
+}
+
+h3 {
+  margin: 1.25em 0;
 }
 
 #title {
@@ -28,14 +33,30 @@ body {
   text-shadow: 5px 5px 5px #000;
 }
 
-.container--cards {
+#deck {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5em;
+  gap: 2em;
+}
+
+.card-slot {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 300px;
+  width: calc(300px * 5 / 7);
+}
+
+.card-slot img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .btn {
+  width: 100%;
+  margin: 0.5em;
   display: inline-block;
   padding: 0.5em 1em;
   border: 1px solid #000;
@@ -46,9 +67,17 @@ body {
   font-size: 1.25em;
 }
 
-.container--btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5em;
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  #deck {
+    flex-direction: row;
+  }
+  .btn {
+    width: auto;
+  }
 }
