@@ -9,22 +9,31 @@
   </head>
   <body>
     <div id="app">
-      <div class="container container--top">
+      <div class="container container--cards">
         <h1 id="title">Deck of Card ♠️</h1>
-        <div class="container container--cards">
-          <h2 id="remaining-cards">Remaining cards:</h2>
-          <h3 id="winner-text">Game of War</h3>
-        </div>
+        <span id="remaining-cards"></span>
+        <h3 id="winner-text">Game of War</h3>
       </div>
+
+      <div class="score">
+        <h3 id="computer-score"></h3>
+      </div>
+
       <div class="container" id="deck">
         <div class="card-slot"></div>
         <div class="card-slot"></div>
       </div>
+
+      <div class="score">
+        <h3 id="own-score"></h3>
+      </div>
+
       <div class="container container--btns">
         <button id="new-deck" class="btn">New Deck!</button>
         <button id="draw-card" class="btn">Draw</button>
       </div>
     </div>
+
     <script src="./index.js"></script>
   </body>
 </html>
