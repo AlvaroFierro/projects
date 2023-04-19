@@ -44,8 +44,8 @@ h3 {
 .card-slot {
   border: 1px solid black;
   border-radius: 5px;
-  height: 300px;
-  width: calc(300px * 5 / 7);
+  height: 150px;
+  width: calc(150px * 5 / 7);
 }
 
 .card-slot img {
@@ -79,5 +79,9 @@ h3 {
   }
   .btn {
     width: auto;
+  }
+  .card-slot {
+    height: 300px;
+    width: calc(300px * 5 / 7);
   }
 }
