@@ -41,17 +41,11 @@ h3 {
   gap: 2em;
 }
 
-.container--cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
 .card-slot {
   border: 1px solid black;
   border-radius: 5px;
-  height: 120px;
-  width: calc(120px * 5 / 7);
+  height: 300px;
+  width: calc(300px * 5 / 7);
 }
 
 .card-slot img {
@@ -79,22 +73,11 @@ h3 {
   cursor: pointer;
 }
 
-.btn:disabled {
-  background-color: rgb(165, 165, 165);
-  color: #000;
-  cursor: not-allowed;
-}
-
 @media screen and (min-width: 768px) {
   #deck {
     flex-direction: row;
   }
   .btn {
     width: auto;
-  }
-
-  .card-slot {
-    height: 300px;
-    width: calc(300px * 5 / 7);
   }
 }
