@@ -75,6 +75,12 @@ body {
   cursor: pointer;
 }
 
+#draw-card[disabled] {
+  cursor: not-allowed;
+  background-color: rgb(175, 175, 175);
+  color: #000;
+}
+
 @media screen and (min-width: 768px) {
   #deck {
     flex-direction: row;
