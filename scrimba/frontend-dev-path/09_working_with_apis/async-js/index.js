@@ -14,38 +14,35 @@ const url = 'https://deckofcardsapi.com/api/deck/new/shuffle/'
 newDeckBtn.addEventListener('click', fetchCard)
 drawCardBtn.addEventListener('click', drawCard)
 
-function fetchCard() {
-  fetch(url)
-    .then((data) => data.json())
-    .then((data) => {
-      console.log(data)
-      deckId = data.deck_id
-      remainingCardsEl.textContent = `Remaining cards: ${data.remaining}`
-    })
+async function fetchCard() {
+  const res = await fetch(url)
+  const data = await res.json()
+
+  deckId = data.deck_id
+  remainingCardsEl.textContent = `Remaining cards: ${data.remaining}`
 }
 
-function drawCard() {
-  fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
-    .then((res) => res.json())
-    .then((data) => {
-      cardsContainer.children[0].innerHTML = `<img src="${data.cards[0].image}">`
-      cardsContainer.children[1].innerHTML = `<img src="${data.cards[1].image}">`
-      const winnerTxt = determineWinner(data.cards[0], data.cards[1])
+async function drawCard() {
+  const res = await fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
+  const data = await res.json()
 
-      winnerTxtEl.innerHTML = winnerTxt
-      remainingCardsEl.textContent = `Remaining cards: ${data.remaining}`
+  cardsContainer.children[0].innerHTML = `<img src="${data.cards[0].image}">`
+  cardsContainer.children[1].innerHTML = `<img src="${data.cards[1].image}">`
+  const winnerTxt = determineWinner(data.cards[0], data.cards[1])
 
-      if (data.remaining === 0) {
-        drawCardBtn.disabled = true
-        if (computerScore > ownScore) {
-          winnerTxtEl.innerHTML = 'The computer won the game!'
-        } else if (computerScore < ownScore) {
-          winnerTxtEl.innerHTML = 'You won the game!'
-        } else {
-          winnerTxtEl.innerHTML = 'It is a tie game!'
-        }
-      }
-    })
+  winnerTxtEl.innerHTML = winnerTxt
+  remainingCardsEl.textContent = `Remaining cards: ${data.remaining}`
+
+  if (data.remaining === 0) {
+    drawCardBtn.disabled = true
+    if (computerScore > ownScore) {
+      winnerTxtEl.innerHTML = 'The computer won the game!'
+    } else if (computerScore < ownScore) {
+      winnerTxtEl.innerHTML = 'You won the game!'
+    } else {
+      winnerTxtEl.innerHTML = 'It is a tie game!'
+    }
+  }
 }
 
 function determineWinner(card1, card2) {
