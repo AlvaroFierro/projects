@@ -1,27 +1,27 @@
 import characterData from './data.js'
 import Character from './Character.js'
 
-let monstersArray = ['orc', 'demon', 'goblin']
+let rivals = ['red', 'purple', 'blue']
 
 function attack() {
-  wizard.getDiceHtml()
-  orc.getDiceHtml()
-  wizard.takeDamage(wizard.currentDiceScore)
-  orc.takeDamage(orc.currentDiceScore)
+  black.getDiceHtml()
+  red.getDiceHtml()
+  black.takeDamage(black.currentDiceScore)
+  red.takeDamage(red.currentDiceScore)
   render()
 
-  if (wizard.dead || orc.dead) gameOver()
+  if (black.dead || red.dead) gameOver()
 }
 
 function gameOver() {
   const endMessage =
-    orc.dead && wizard.dead
+    red.dead && black.dead
       ? 'No victors - all creatures are dead'
-      : wizard.dead
-      ? 'The Orc is Victorius'
-      : 'The Wizard Wins'
+      : black.dead
+      ? 'The red is Victorius'
+      : 'The black Wins'
 
-  const endEmoji = orc.dead ? '🔮' : '☠️'
+  const endEmoji = red.dead ? '⚫' : '🔴'
   document.body.innerHTML = `<div class="end-game">
     <h2>Game Over</h2>
     <h3>${endMessage}</h3>
@@ -29,12 +29,12 @@ function gameOver() {
   </div>`
 }
 
-const wizard = new Character(characterData.hero)
-const orc = new Character(characterData.monster)
+const black = new Character(characterData.black)
+const red = new Character(characterData.red)
 
 function render() {
-  document.getElementById('hero').innerHTML = wizard.getCharacterHtml()
-  document.getElementById('monster').innerHTML = orc.getCharacterHtml()
+  document.getElementById('black').innerHTML = black.getCharacterHtml()
+  document.getElementById('red').innerHTML = red.getCharacterHtml()
 }
 
 document.getElementById('attack-button').addEventListener('click', attack)

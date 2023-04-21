@@ -18,11 +18,11 @@ function Character(data) {
     const totalAttackScore = attackScoreArray.reduce((total, current) => total + current)
 
     this.health -= totalAttackScore
+
     if (this.health <= 0) {
       this.dead = true
       this.health = 0
     }
-    console.log(getPercentage(this.health, this.maxHealth))
   }
 
   this.getHealthBarHtml = function () {
