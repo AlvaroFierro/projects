@@ -6,8 +6,8 @@ let rivals = ['red', 'purple', 'blue']
 function attack() {
   black.getDiceHtml()
   red.getDiceHtml()
-  black.takeDamage(black.currentDiceScore)
-  red.takeDamage(red.currentDiceScore)
+  black.takeDamage(red.currentDiceScore)
+  red.takeDamage(black.currentDiceScore)
   render()
 
   if (black.dead || red.dead) gameOver()
