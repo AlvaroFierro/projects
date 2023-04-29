@@ -20,11 +20,14 @@ Overview
     - [Accessing `resources`](#accessing-resources)
 - [Nested Resources](#nested-resources)
 - [Query Strings](#query-strings)
+- [Promises](#promises)
 - [Useful links](#useful-links)
 
 ## What is an API?
 
 An API stands out for Application Programming Interface, which allows you to have interactivity within your website.
+
+[Back to top](#apis)
 
 # Endpoints
 
@@ -32,10 +35,14 @@ An API stands out for Application Programming Interface, which allows you to hav
 
 - The endpoint must be protected from unauthorized users, sometimes using a token or a key like an API key.
 
+[Back to top](#apis)
+
 # API's used
 
 - DOM API (.getElementById, .querySelector, .addEventListener, etc.)
 - Array methods API (.map, .filter, .reduce, etc.)
+
+[Back to top](#apis)
 
 # Clients, servers and requests
 
@@ -59,9 +66,13 @@ Requires a connection to the internet
 - Could contain the resource (HTML, JSON data, etc) asked for by the client.
 - Could contain a response code (200, 404, 500, etc) that indicates the status of the request.
 
+[Back to top](#apis)
+
 # JSON
 
 Stands for JavaScript Object Notation and is a way to store data in a way that is easy to read and write. Practically is JavaScript
+
+[Back to top](#apis)
 
 # Fetch
 
@@ -80,6 +91,8 @@ In your console should appear something like this:
 ```bash
 $ {message: "https://images.dog.ceo/breeds/malamute/n02110063_16966.jpg", status: "success"}
 ```
+
+[Back to top](#apis)
 
 # REST API
 
@@ -109,9 +122,13 @@ That's the interaction between the client and the server is the client asking th
 
 ![resources](https://user-images.githubusercontent.com/71525061/224426490-6d7045c4-1461-4cca-ba25-dc36bc2a7b57.png)
 
+[Back to top](#apis)
+
 # Nested Resources
 
 ![nested-resources](https://user-images.githubusercontent.com/71525061/224428542-46cd6adb-00d8-41ea-85d6-4bc5d0d7f273.png)
+
+[Back to top](#apis)
 
 # Query Strings
 
@@ -121,9 +138,18 @@ A way to filter the results that we get back
 
 ![filtering-results](https://user-images.githubusercontent.com/71525061/224429164-bb7031f5-9698-4202-9903-ea3ecc206879.png)
 
+[Back to top](#apis)
+
+# Promises
+
+[Promises][promises] are a way to handle asynchronous tasks in Javascript. A Promise has many similarities to a progress bar; they represent an unfinished and ongoing process.
+
+For more details about promises check this out this [readme.md file](../09_working_with_apis/async-js/readme.md#promises)
+
 # Useful links
 
 - [HTTP Requests](https://docs.google.com/presentation/d/e/2PACX-1vSxS5iMjTveO-IBqdDE65dgouZStLTW-Vlyt3N9js3FnMCeW8cwSgmrkGzX2i_g0qGCM6fJDKZ-r3Se/pub?start=false&loop=false&delayms=3000&slide=id.g7fabbaef24_1_232)
 - [REST](https://docs.google.com/presentation/d/e/2PACX-1vTEztADtG8OhJ4695LYwtVftNgriQK7zAOsYNru9OfaPA1mQEAlkNd1BqgOdec1aZRC6PxSxOnlrBeH/pub?start=false&loop=false&delayms=3000&slide=id.g7fabbaef24_1_232)
+- [Promises](https://discordjs.guide/additional-info/async-await.html#how-do-promises-work)
 
-[Back to top](#table-of-contents)
+[Back to top](#apis)
