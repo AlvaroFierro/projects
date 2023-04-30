@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', system-ui, sans-serif;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  text-shadow: 5px 5px 10px #233;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.top {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.25vh;
+}
+
+.top,
+.bottom {
+  padding: 1em 1.25em;
+}
+
+.middle {
+  font-size: 20vh;
+  text-align: center;
+}
+
+#author {
+  font-size: 2.125vh;
+  font-weight: bolder;
+}
+
+#currencies {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+  gap: 0.785vw;
+  font-size: 2.25vh;
+}
+
+.coin img {
+  max-width: 2vw;
+  height: auto;
+}
+
+.coin-info {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25vh;
+}
