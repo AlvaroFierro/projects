@@ -1,0 +1,17 @@
+{
+  "manifest_version": 1,
+  "version": 1.0,
+  "name": "Personal Dashboard",
+  "author": "Alvaro Fierro",
+  "description": "A personal dashboard for my personal use",
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "developer": {
+    "name": "Alvaro Fierro",
+    "url": "https://alvaro-fierro.pages.dev/"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
