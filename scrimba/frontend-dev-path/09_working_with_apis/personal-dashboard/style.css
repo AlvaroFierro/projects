@@ -25,10 +25,9 @@ body {
 }
 
 .top {
-  height: auto;
+  height: 0;
   display: flex;
   justify-content: space-between;
-  font-size: 2.25vh;
 }
 
 .top,
@@ -52,16 +51,26 @@ body {
   gap: 0.5vh;
 }
 
-.coin {
+.coin,
+.weather-info {
   display: flex;
   align-items: center;
   gap: 0.785vw;
-  font-size: 2.25vh;
+  font-size: 3.2vh;
+}
+
+.weather-location {
+  float: right;
 }
 
 .coin img {
-  max-width: 2vw;
   height: auto;
+  max-width: 2vw;
+}
+
+.weather-info img {
+  height: auto;
+  max-width: 3vw;
 }
 
 .coin-info {
