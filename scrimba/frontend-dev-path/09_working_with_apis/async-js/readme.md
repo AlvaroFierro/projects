@@ -9,6 +9,7 @@
   - [Fulfilled](#fulfilled)
   - [Rejected](#rejected)
   - [Promises .then()](#promises-then)
+- [ES8 Async/Await](#es8-asyncawait)
 
 # What is Async-JS?
 
@@ -107,3 +108,9 @@ voters.filter((voter) => voter.voted).map((voter) => console.log(voter.email))
   - Pending
   - Fulfilled - run `.then()` block
   - Rejected
+
+# ES8 Async/Await
+
+- Makes asynchronous code look synchronous
+- `async` goes before a function declaration
+- `await` goes before a method/function that returns a `promise`
