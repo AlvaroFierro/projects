@@ -1,0 +1,130 @@
+:root {
+  --body-color: #1c1c1c;
+  --card-container-color: #23252c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: var(--body-color); */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.card.container {
+  max-width: 350px;
+  margin: 2rem auto;
+  background-color: var(--card-container-color);
+  padding: 2em;
+  color: white;
+}
+
+.card {
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  margin: 0 auto;
+}
+
+.profile {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.description {
+  margin-top: 1em;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.frontend {
+  color: #f3bf99;
+}
+
+.description a {
+  color: white;
+  text-decoration: none;
+}
+
+.links {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.link > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#email {
+  background-color: white;
+  padding: 0.5em 1.5em;
+  color: black;
+}
+
+#linkedin {
+  background-color: #5093e2;
+  padding: 0.5em 1.5em;
+}
+
+#email,
+#linkedin {
+  font-weight: 500;
+  border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+}
+
+.about > h2 {
+  margin-top: 1rem;
+}
+
+p {
+  margin-top: 1em;
+  font-size: 0.85em;
+  line-height: 1.25em;
+}
+
+.socials {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.app {
+  background-color: #918e9b;
+  padding: 0.25rem;
+  border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+}
+
+.app > a {
+  color: #161619;
+  text-decoration: none;
+  margin: 0;
+}
