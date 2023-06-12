@@ -9,17 +9,18 @@
 }
 
 .card {
-  flex: 0 0 auto;
-  /* Add any other desired styling for the cards */
+  /* display: flex; */
+  flex-direction: column;
 }
 
 .card-img {
   position: relative;
-}
-
-.card-img img {
-  width: 100%;
-  height: auto;
+  object-fit: cover;
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
 }
 
 .status {
@@ -53,4 +54,15 @@
 .country {
   color: #918e9b;
   font-size: 0.85em;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
 }
