@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Jessica is awesome",
+    "author": "Marlon Brando",
+    "rating": 6,
+    "pages": 150,
+    "genres": ["comedy"],
+    "reviews": [
+      {
+        "name": "Yoshi",
+        "body": "was fantastic"
+      },
+      {
+        "name": "mario",
+        "body": "soso"
+      }
+    ]
+  },
+  {
+    "title": "I slept in the road",
+    "author": "Frederick Douglas",
+    "rating": 8,
+    "pages": 350,
+    "genres": ["adventure", "recent", "novel"],
+    "reviews": [
+      {
+        "name": "agatha",
+        "body": "was fantastic"
+      },
+      {
+        "name": "lucas",
+        "body": "amazing"
+      }
+    ]
+  },
+  {
+    "title": "John broke his leg",
+    "author": "Diana Ross",
+    "rating": 9,
+    "pages": 290,
+    "genres": ["fantasy", "auto-biography", "recent"],
+    "reviews": [
+      {
+        "name": "charles",
+        "body": "soso"
+      },
+      {
+        "name": "jessica",
+        "body": "unbelievable"
+      }
+    ]
+  },
+  {
+    "title": "War of the Worlds",
+    "author": "Goucho Marx",
+    "rating": 8,
+    "pages": 424,
+    "genres": ["vivid", "novel", "sci-fi"],
+    "reviews": [
+      {
+        "name": "Maverick",
+        "body": "i hope there is a sequel"
+      },
+      {
+        "name": "amber",
+        "body": "never read anything like it"
+      }
+    ]
+  }
+]
